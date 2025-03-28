@@ -1,24 +1,27 @@
 # apache-airflow 3.0.0dev example
 
-
-
 ## Getting Started
-
 
 ### Prerequisites
 
 * [uv](https://docs.astral.sh/uv/)
 * docker
 
-### Setup 
+### Setup
+
 ```shell
 git clone https://github.com/apache/airflow/
-uv tool install -e ./dev/breeze
+cd airflow/
+uv tool install -e ./dev/breeze --python 3.12
+uv tool install pre-commit --python 3.12
 
 # move the "dags" directory in this repo to "files/dags" in the cloned airflow repo
 
-breeze start-airflow
+breeze compile-ui-assets
+breeze start-airflow --db-reset
 ```
+
+Open `http://localhost:28080/`
 
 ## Authors
 
