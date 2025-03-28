@@ -174,3 +174,6 @@ poetry.toml
 pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python
+airflow.db
+logs
+simple_auth_manager_passwords.json.generated
