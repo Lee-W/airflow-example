@@ -1,26 +1,24 @@
-# apache-airflow beta4 example
+# apache-airflow 3.0.0dev example
+
+
 
 ## Getting Started
+
 
 ### Prerequisites
 
 * [uv](https://docs.astral.sh/uv/)
+* docker
 
-### Usage
-
+### Setup 
 ```shell
-uv sync
+git clone https://github.com/apache/airflow/
+uv tool install -e ./dev/breeze
 
-# issue found in standalone command, but already fixed in the main branch
-mv patch/standalone_command.py .venv/lib/python3.12/site-packages/airflow/cli/commands/local_commands/standalone_command.py
+# move the "dags" directory in this repo to "files/dags" in the cloned airflow repo
 
-export AIRFLOW_HOME=`pwd`
-uv run airflow db migrate
-uv run airflow standalone
-
+breeze start-airflow
 ```
-
-A `simple_auth_manager_passwords.json.generated` file will be generated. That's the default admin user name and password for you to login the web server on `http://localhost:8080/`
 
 ## Authors
 
