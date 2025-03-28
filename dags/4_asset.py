@@ -10,7 +10,7 @@ alias = AssetAlias(name="example_alias")
 
 
 @dag(schedule=None, catchup=False)
-def example_dag():
+def example_dag_4():
     @task(outlets=[alias])
     def parse_data(*, outlet_events) -> None:
         # assuming this is the result from parsed data
@@ -44,6 +44,6 @@ def leaf_dag_2():
     leaf_task()
 
 
-example_dag()
+example_dag_4()
 leaf_dag_1()
 leaf_dag_2()

@@ -8,7 +8,7 @@ from airflow.sdk import chain
     schedule="0 0 * * *",
     catchup=False,
 )
-def example_dag():
+def example_dag_2():
     @task
     def parse_data():
         pass
@@ -24,4 +24,4 @@ def example_dag():
     chain(parse_data(), process_data(), report())
 
 
-example_dag()
+example_dag_2()

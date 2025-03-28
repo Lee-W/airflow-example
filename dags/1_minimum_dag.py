@@ -21,7 +21,7 @@ def report():
 
 
 with DAG(
-    dag_id="example_dag",
+    dag_id="example_dag_1",
     schedule="0 0 * * *",
     catchup=False,
 ) as dag:

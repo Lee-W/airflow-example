@@ -8,7 +8,7 @@ from airflow.sdk import chain
     schedule=None,
     catchup=False,
 )
-def example_dag():
+def example_dag_6():
     @task
     def task1():
         pass
@@ -28,4 +28,4 @@ def example_dag():
     chain(task1(), task2(), [task3(), task4()])
 
 
-example_dag()
+example_dag_6()

@@ -15,7 +15,7 @@ example_data = Asset(
     schedule=example_data,
     catchup=False,
 )
-def example_dag():
+def example_dag_3():
     @task
     def parse_data():
         pass
@@ -31,4 +31,4 @@ def example_dag():
     chain(parse_data(), process_data(), report())
 
 
-example_dag()
+example_dag_3()

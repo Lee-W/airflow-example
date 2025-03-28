@@ -7,7 +7,7 @@ from airflow.decorators import dag, task
     schedule=None,
     catchup=False,
 )
-def example_dag():
+def example_dag_5():
     @task
     def task1():
         pass
@@ -30,4 +30,4 @@ def example_dag():
     task4()
 
 
-example_dag()
+example_dag_5()
