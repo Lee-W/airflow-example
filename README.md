@@ -20,8 +20,8 @@ uv tool install pre-commit --python 3.12
 breeze compile-ui-assets
 breeze start-airflow --db-reset
 ```
-
-Open `http://localhost:28080/`
+Open `http://localhost:28080/` to access the airflow web interface
+The default username / password for testing are both "admin". 
 
 ## Authors
 
